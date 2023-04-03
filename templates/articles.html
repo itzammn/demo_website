@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>articles</title>
+</head>
+<body>
+    <a href="{% url 'home'  %}">home</a> <a href="{% url 'categories' %}"></a>
+    <h1>articles</h1>
+
+    {% for item in articles %}
+    <div>
+        <h2>{{item.html}}</h2>
+        <small>{{item.author}},{{item.data}}</small>
+    </div>
+    {% endfor %}
+</body>
+</html>
